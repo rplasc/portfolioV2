@@ -1,0 +1,5 @@
+{
+  "search.useIgnoreFiles": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
