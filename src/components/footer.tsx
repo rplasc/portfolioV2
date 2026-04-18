@@ -23,7 +23,7 @@ export function Footer() {
             <FontAwesomeIcon size="lg" icon={faLinkedin}/>
           </a>
           <a
-            href="https://github.com/raul-plascencia"
+            href="https://github.com/rplasc"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
