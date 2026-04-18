@@ -2,9 +2,10 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { currentEmployer, previousEmployers } from "@/data/employers";
-import { projects } from "@/data/projects";
+import { featuredProjects, otherProjects } from "@/data/projects";
 import { contact } from "@/data/contact";
 import { ProjectListItem } from "@/components/project-list-item";
+import { FeaturedProjectCard } from "@/components/featured-project-card";
 
 export default function Home() {
   return (
@@ -28,24 +29,25 @@ export default function Home() {
               <p className="font-mono text-sm tracking-wide text-white/65">
                 Full-stack Software Engineer
               </p>
-              <p className="mt-2 flex items-center justify-center gap-2 text-sm text-white/65 md:justify-start">
-                Currently building Health Data Management Platforms with{" "}
-                {currentEmployer.name}
-                <Image
-                  src={currentEmployer.logo}
-                  alt={currentEmployer.name}
-                  width={20}
-                  height={20}
-                  className="rounded-sm"
-                />
+              <p className="mt-2 text-sm text-white/65">
+                Currently building Health Data Management Platforms at{" "}
+                <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap">
+                  <Image
+                    src={currentEmployer.logo}
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="translate-y-0.5 rounded-sm"
+                  />
+                  <span className="text-white/85">{currentEmployer.name}</span>
+                </span>
               </p>
             </div>
 
             <div className="flex justify-center gap-3 md:justify-start">
               <Button
-                className="rounded-sm px-8"
+                className="rounded-sm bg-white px-8 text-slate-950 hover:bg-white/90"
                 asChild
-                variant="default"
                 size="lg"
               >
                 <a href="/resume.pdf" download>
@@ -77,13 +79,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects */}
+        {/* Featured — big beat */}
+        <section className="mt-28 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
+          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-white/40 uppercase md:w-40 md:pt-1">
+            Featured
+          </h2>
+          <div className="flex flex-1 flex-col gap-10">
+            {featuredProjects.map((project, index) => (
+              <FeaturedProjectCard
+                key={project.name}
+                project={project}
+                bordered={index !== 0}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* More projects — tight beat, same act */}
         <section className="mt-16 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
           <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-white/40 uppercase md:w-40 md:pt-1">
-            Projects
+            More projects
           </h2>
           <ul className="flex flex-1 flex-col divide-y divide-white/10">
-            {projects.map((project) => (
+            {otherProjects.map((project) => (
               <ProjectListItem key={project.name} project={project} />
             ))}
           </ul>
@@ -95,12 +113,9 @@ export default function Home() {
             Contact
           </h2>
           <div className="flex flex-col gap-2">
-            <p className="text-sm text-white/65">
-              Open to new roles and interesting problems.
-            </p>
             <a
               href={`mailto:${contact.email}`}
-              className="font-mono text-sm text-white/75 transition-colors hover:text-white/95"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 font-mono text-base text-white transition-colors hover:text-white/75 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {contact.email}
             </a>
