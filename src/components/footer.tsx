@@ -13,6 +13,13 @@ export function Footer() {
         <p className="font-mono text-xs tracking-wide text-muted-foreground">
           &copy; {year} Raul Plascencia
         </p>
+        <a
+          className="font-mono text-xs tracking-wide text-muted-foreground transition-[color,background-color] duration-200 ease-out hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          href={`mailto:${contact.email}`} 
+          aria-label="Email"
+          >
+          {contact.email}
+        </a>
         <div className="flex items-center gap-1">
           <a
             href={contact.linkedin}
