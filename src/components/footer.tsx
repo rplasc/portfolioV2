@@ -2,6 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { contact } from "@/data/contact"
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -14,20 +15,20 @@ export function Footer() {
         </p>
         <div className="flex items-center gap-1">
           <a
-            href="https://linkedin.com/in/raul-plascencia"
+            href={contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="flex size-11 items-center justify-center rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="flex size-11 items-center justify-center rounded-sm text-muted-foreground transition-[color,background-color] duration-200 ease-out hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <FontAwesomeIcon icon={faLinkedin}/>
           </a>
           <a
-            href="https://github.com/rplasc"
+            href={contact.github}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="flex size-11 items-center justify-center rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            className="flex size-11 items-center justify-center rounded-sm text-muted-foreground transition-[color,background-color] duration-200 ease-out hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
             <FontAwesomeIcon icon={faGithub}/>
           </a>
