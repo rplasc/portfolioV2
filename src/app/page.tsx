@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { currentEmployer, previousEmployers } from "@/data/employers"
+import { GlanceCards } from "@/components/glance-cards"
 
 export default function Home() {
   return (
@@ -68,6 +69,11 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* At a glance */}
+        <section>
+          <GlanceCards />
         </section>
 
       </main>
