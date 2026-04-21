@@ -1,5 +1,6 @@
 export interface Project {
   name: string;
+  slug: string;
   description: string;
   stack: string[];
   details: string;
@@ -11,6 +12,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: "Capstone Project — Mobile App & Cloud Server",
+    slug: "sweep",
     description:
       "Cross-platform file syncing experience built for a real client",
     stack: ["React Native", "Flask", "Rclone"],
@@ -22,6 +24,7 @@ export const projects: Project[] = [
   },
   {
     name: "Chopperbot",
+    slug: "chopperbot",
     description:
       "Self-hosted Discord assistant with persistent conversational memory",
     stack: ["Python", "Discord.py", "OpenAI", "KoboldCPP"],
@@ -33,6 +36,7 @@ export const projects: Project[] = [
   },
   {
     name: "Image Editor",
+    slug: "",
     description: "Desktop image editor for fast everyday photo adjustments",
     stack: ["C++", "Qt Framework"],
     details:

@@ -115,7 +115,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <a
               href={`mailto:${contact.email}`}
-              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 font-mono text-base text-white transition-colors hover:text-white/75 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 text-base text-white underline underline-offset-2 decoration-white/35 transition-colors duration-200 ease-out hover:decoration-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {contact.email}
             </a>

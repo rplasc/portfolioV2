@@ -10,7 +10,7 @@ export function Footer() {
   return (
     <footer className="border-border/60 border-t px-4 py-4">
       <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-3 sm:flex-row sm:justify-between">
-        <p className="text-muted-foreground font-mono text-xs tracking-wide">
+        <p className="text-muted-foreground text-xs">
           &copy; {year} Raul Plascencia
         </p>
         <div className="flex items-center gap-1">
