@@ -13,7 +13,7 @@ export default function Home() {
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-20">
         {/* Identity + CTA — asymmetric on md+ */}
         <section className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10">
-          <Avatar className="mx-auto size-32 shrink-0 md:mx-0">
+          <Avatar className="mx-auto size-32 shrink-0 md:mx-0 md:size-36">
             <AvatarImage
               src="https://media.licdn.com/dms/image/v2/D5603AQEoAWAOBVkGcg/profile-displayphoto-crop_800_800/B56Z15RtnxGoAI-/0/1775856180664?e=1778112000&v=beta&t=mWc6JIeNtasxHhNFW1FiV5TLMnHojvVtC7mwps_dz8E"
               alt="Raul Plascencia"
@@ -23,7 +23,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-6 text-center md:text-left">
             <div className="flex flex-col gap-2">
-              <h1 className="text-4xl leading-[1.05] font-semibold tracking-[-0.02em] text-white/95 md:text-5xl">
+              <h1 className="text-5xl leading-[1.02] font-bold tracking-[-0.03em] text-white/95 md:text-6xl md:tracking-[-0.04em]">
                 Raul Plascencia
               </h1>
               <p className="font-mono text-sm tracking-wide text-white/65">
