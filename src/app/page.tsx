@@ -14,10 +14,7 @@ export default function Home() {
         {/* Identity + CTA — asymmetric on md+ */}
         <section className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10">
           <Avatar className="mx-auto size-32 shrink-0 md:mx-0 md:size-36">
-            <AvatarImage
-              src="https://media.licdn.com/dms/image/v2/D5603AQEoAWAOBVkGcg/profile-displayphoto-crop_800_800/B56Z15RtnxGoAI-/0/1775856180664?e=1778112000&v=beta&t=mWc6JIeNtasxHhNFW1FiV5TLMnHojvVtC7mwps_dz8E"
-              alt="Raul Plascencia"
-            />
+            <AvatarImage src="/raulplascencia.jpg" alt="Raul Plascencia" />
             <AvatarFallback className="text-3xl">RP</AvatarFallback>
           </Avatar>
 
@@ -115,7 +112,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <a
               href={`mailto:${contact.email}`}
-              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 text-base text-white underline underline-offset-2 decoration-white/35 transition-colors duration-200 ease-out hover:decoration-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 text-base text-white underline decoration-white/35 underline-offset-2 transition-colors duration-200 ease-out hover:decoration-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {contact.email}
             </a>
