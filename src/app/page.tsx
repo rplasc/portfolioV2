@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { currentEmployer, previousEmployers } from "@/data/employers";
+import { previousEmployers } from "@/data/employers";
 import { featuredProjects, otherProjects } from "@/data/projects";
 import { contact } from "@/data/contact";
 import { ProjectListItem } from "@/components/project-list-item";
@@ -25,19 +25,6 @@ export default function Home() {
               </h1>
               <p className="font-mono text-sm tracking-wide text-white/65">
                 Full-stack Software Engineer
-              </p>
-              <p className="mt-2 text-sm text-white/65">
-                Currently building Health Data Management Platforms at{" "}
-                <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap">
-                  <Image
-                    src={currentEmployer.logo}
-                    alt=""
-                    width={16}
-                    height={16}
-                    className="translate-y-0.5 rounded-sm"
-                  />
-                  <span className="text-white/85">{currentEmployer.name}</span>
-                </span>
               </p>
             </div>
 
