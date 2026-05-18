@@ -23,6 +23,18 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    name: "Songwriting Assistant",
+    slug: "songwriting-assistant",
+    description:
+      "A songwriting assistant that tracks syllables and suggests rhymes in real-time.",
+    stack: ["Python", "NestJS", "NextJS"],
+    details:
+      "Built a songwriting assistant that helped users craft lyrics by tracking syllable counts and suggesting rhymes in real-time. The backend was built in Python for natural language processing, with a NestJS API and a NextJS frontend for a smooth user experience.",
+    github: "https://github.com/rplasc/songwriting-assistant",
+    demo: "",
+    featured: true,
+  },
+  {
     name: "Chopperbot",
     slug: "chopperbot",
     description:

@@ -60,4 +60,23 @@ export const caseStudies: Record<string, CaseStudy> = {
     github: "https://github.com/rplasc/ChopperBot",
     demo: "",
   },
+  "songwriting-assistant": {
+    slug: "songwriting-assistant",
+    title: "Songwriting Assistant",
+    tagline:
+      "A bilingual songwriting assistant that tracks syllables and suggests rhymes in real-time.",
+    role: "Creator & Maintainer",
+    timeframe: "2025 – Present",
+    stack: ["Python", "NestJS", "NextJS"],
+    overview:
+      "The Songwriting Assistant is a web application designed to help musicians and songwriters craft lyrics in both English and Spanish by providing real-time feedback on syllable counts and rhyme suggestions. The backend was built in Python for natural language processing, with a NestJS API and a NextJS frontend for a smooth user experience.",
+    highlights: [
+      "Provides real-time syllable tracking and rhyme suggestions in English and soon in Spanish.",
+      "Built with a modern web stack for a responsive user experience.",
+      "Integrates seamlessly with existing music production workflows.",
+      "Currently, allows songwriters to save drafts locally.",
+    ],
+    github: "https://github.com/rplasc/songwriting-assistant",
+    demo: "",
+  },
 };
