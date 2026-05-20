@@ -26,10 +26,10 @@ export const projects: Project[] = [
     name: "Songwriting Assistant",
     slug: "songwriting-assistant",
     description:
-      "A songwriting assistant that tracks syllables and suggests rhymes in real-time.",
+      "A bilingual songwriting assistant that tracks syllables and suggests rhymes in real-time.",
     stack: ["Python", "NestJS", "NextJS"],
     details:
-      "Built a songwriting assistant that helped users craft lyrics by tracking syllable counts and suggesting rhymes in real-time. The backend was built in Python for natural language processing, with a NestJS API and a NextJS frontend for a smooth user experience.",
+      "Built a songwriting assistant that helped users craft lyrics by tracking syllable counts and suggesting rhymes in real-time. The backend was built in Python for natural language processing (English and Spanish), with a NestJS API and a NextJS frontend for a smooth user experience.",
     github: "https://github.com/rplasc/songwriting-assistant",
     demo: "",
     featured: true,
@@ -55,6 +55,17 @@ export const projects: Project[] = [
       "Delivered a desktop image editor that let users handle common photo edits like cropping, resizing, rotation, and color correction in one focused interface. Built the editing workflows and custom UI in C++ with Qt.",
     github: "https://github.com/rplasc/CSE165Project",
     demo: "",
+    featured: false,
+  },
+  {
+    name: "Birthday Site",
+    slug: "",
+    description: "A retro-style website that lets users send birthday wishes",
+    stack: ["NextJS", "CSS"],
+    details:
+      "Created a nostalgic birthday greeting website where users can send personalized messages to their friends and family. Implemented a responsive design with smooth animations and a simple, intuitive user interface.",
+    github: "https://github.com/rplasc/birthday-site",
+    demo: "https://birthday.raulplascencia.dev",
     featured: false,
   },
 ];
