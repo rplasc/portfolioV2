@@ -34,7 +34,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Led a four-person team and owned the technical roadmap through delivery.",
       "Built a Flask API that brokered Google Drive and Dropbox OAuth flows and file operations.",
       "Integrated Rclone so the server could move files reliably between providers without re-implementing each cloud's quirks.",
-      "Worked in React Native to stabilize and sharpen the Android client — fewer sync failures, clearer flows.",
+      "Worked in React Native to stabilize the Android client: fewer sync failures, clearer flows.",
       "Shipped ahead of the semester-end deadline with the client's feature list met.",
     ],
     outcome: "Delivered a production-ready build to Sweep before the deadline.",
@@ -50,7 +50,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     timeframe: "2023 – Present",
     stack: ["Python", "Discord.py", "OpenAI", "KoboldCPP", "SQLite"],
     overview:
-      "Chopperbot is a Discord companion I built to give communities a personality-driven assistant that is running on my homelab. It holds conversations, remembers past interactions, and ships with a handful of utilities my friends actually use.",
+      "Chopperbot is a Discord companion I built to give communities a personality-driven assistant running on my homelab. It holds conversations, remembers past interactions, and ships with a handful of utilities my friends actually use.",
     highlights: [
       "Serves 100+ users across multiple Discord communities.",
       "Fine-tuned a local LLM on a private homelab so conversations stay self-hosted and off per-token billing.",
@@ -64,19 +64,45 @@ export const caseStudies: Record<string, CaseStudy> = {
     slug: "songwriting-assistant",
     title: "Songwriting Assistant",
     tagline:
-      "A bilingual songwriting assistant that tracks syllables and suggests rhymes in real-time.",
+      "Bilingual songwriting tool with real-time syllable tracking and rhyme suggestions",
     role: "Creator & Maintainer",
     timeframe: "2025 – Present",
     stack: ["Python", "NestJS", "NextJS"],
     overview:
-      "The Songwriting Assistant is a web application designed to help musicians and songwriters craft lyrics in both English and Spanish by providing real-time feedback on syllable counts and rhyme suggestions. The backend was built in Python for natural language processing, with a NestJS API and a NextJS frontend for a smooth user experience.",
+      "I built the Songwriting Assistant to help with writing lyrics in English and Spanish. It gives real-time feedback on syllable counts and surfaces rhyme options as you type. The NLP work happens in Python, a NestJS API sits in the middle, and Next.js handles the frontend.",
     highlights: [
       "Provides real-time syllable tracking and rhyme suggestions in English and Spanish.",
-      "Built with a modern web stack for a responsive user experience.",
-      "Integrates seamlessly with existing music production workflows.",
-      "Currently, allows songwriters to save drafts locally.",
+      "Lets songwriters save drafts locally.",
     ],
     github: "https://github.com/rplasc/songwriting-assistant",
     demo: "",
+  },
+  "personality-matrix": {
+    slug: "personality-matrix",
+    title: "Personality Matrix",
+    tagline:
+      "Personality quiz that assigns you a narrative archetype, styled as a classified dossier",
+    role: "Creator & Maintainer",
+    timeframe: "2026 – Present",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "PostHog",
+    ],
+    overview:
+      "Personality Matrix is a 28-question quiz that assigns you one of 19 narrative archetypes, styled as a classified document system. You answer questions, it scores your personality functions, and produces a dossier. Results are saved to a database and shareable by URL.",
+    highlights: [
+      "Scoring tracks eight personality functions (Plot Armor, Romantic Tension, Backstory Trauma, and others) across all 28 answers. Each answer shifts specific functions on a -2 to +2 scale, which normalize to 0-100 before feeding into eight matrix axes.",
+      "Archetype matching runs in tiers: two rare types require 78+ or 82+ on their dominant functions. The other 17 match by dominant function average with a small matrix bonus. All scoring logic lives in src/lib/.",
+      "Results are saved to PostgreSQL via Prisma and served at a unique URL, so users can share or return to their result.",
+      "PostHog tracks quiz completions and archetype distribution across real users.",
+    ],
+    outcome: "Went from idea to live product in a weekend.",
+    github: "https://github.com/rplasc/personality-matrix",
+    demo: "https://personality-matrix.raulplascencia.dev",
   },
 };

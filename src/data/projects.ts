@@ -26,10 +26,10 @@ export const projects: Project[] = [
     name: "Songwriting Assistant",
     slug: "songwriting-assistant",
     description:
-      "A bilingual songwriting assistant that tracks syllables and suggests rhymes in real-time.",
+      "Bilingual songwriting tool with real-time syllable tracking and rhyme suggestions",
     stack: ["Python", "NestJS", "NextJS"],
     details:
-      "Built a songwriting assistant that helped users craft lyrics by tracking syllable counts and suggesting rhymes in real-time. The backend was built in Python for natural language processing (English and Spanish), with a NestJS API and a NextJS frontend for a smooth user experience.",
+      "Built a songwriting assistant for writing lyrics in English and Spanish. It tracks syllable counts and surfaces rhyme suggestions as you type. Python handles the NLP, NestJS is the API layer, and Next.js handles the frontend.",
     github: "https://github.com/rplasc/songwriting-assistant",
     demo: "",
     featured: true,
@@ -63,9 +63,21 @@ export const projects: Project[] = [
     description: "A retro-style website that lets users send birthday wishes",
     stack: ["NextJS", "CSS"],
     details:
-      "Created a nostalgic birthday greeting website where users can send personalized messages to their friends and family. Implemented a responsive design with smooth animations and a simple, intuitive user interface.",
+      "Built a retro birthday greeting site where users write messages for friends. Next.js with CSS animations for the nostalgic aesthetic.",
     github: "https://github.com/rplasc/birthday-site",
     demo: "https://birthday.raulplascencia.dev",
+    featured: false,
+  },
+  {
+    name: "Personality Matrix",
+    slug: "personality-matrix",
+    description:
+      "28-question personality quiz that assigns you a narrative archetype, built over a weekend",
+    stack: ["React", "PostgreSQL", "Prisma"],
+    details:
+      "Built a personality quiz that scores responses and generates a profile. React handles the frontend; PostgreSQL and Prisma manage quiz data and results on the backend.",
+    github: "https://github.com/rplasc/personality-matrix",
+    demo: "https://personality-matrix.raulplascencia.dev",
     featured: false,
   },
 ];
