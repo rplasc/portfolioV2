@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { caseStudies } from "@/data/case-studies";
 import { actionLinkClass } from "@/lib/link-styles";
 
@@ -41,11 +42,30 @@ export default async function CaseStudyPage({
   return (
     <div className="flex flex-1 flex-col">
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-20">
+        {/* Identity strip — this page can arrive via a shared link with no
+            other context, so credibility and a way back live here, together */}
         <Link
           href="/"
-          className="focus-visible:ring-ring focus-visible:ring-offset-background text-link decoration-link/30 hover:decoration-link -mx-1 w-fit rounded-sm px-1 font-mono text-xs tracking-[0.2em] uppercase underline underline-offset-2 transition-colors duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          className="focus-visible:ring-ring focus-visible:ring-offset-background group -mx-1 flex w-fit items-center gap-3 rounded-sm px-1 py-1 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
         >
-          ← Back
+          <span
+            aria-hidden="true"
+            className="text-muted-foreground group-hover:text-link font-mono text-xs transition-colors duration-200 ease-out"
+          >
+            ←
+          </span>
+          <Avatar className="size-9 shrink-0">
+            <AvatarImage src="/raulplascencia.jpg" alt="" />
+            <AvatarFallback className="text-xs">RP</AvatarFallback>
+          </Avatar>
+          <span className="flex flex-col leading-tight">
+            <span className="text-foreground/95 group-hover:text-link text-sm font-medium transition-colors duration-200 ease-out">
+              Raul Plascencia
+            </span>
+            <span className="text-muted-foreground font-mono text-xs tracking-wide">
+              Full-stack Software Engineer
+            </span>
+          </span>
         </Link>
 
         {/* Title block — identity first */}
