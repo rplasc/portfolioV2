@@ -57,7 +57,9 @@ export default function Home() {
                   height={20}
                   className="rounded-sm"
                 />
-                <span className="text-sm text-muted-foreground">{employer.name}</span>
+                <span className="text-muted-foreground text-sm">
+                  {employer.name}
+                </span>
               </div>
             ))}
           </div>

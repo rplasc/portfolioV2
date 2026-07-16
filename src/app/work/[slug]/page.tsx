@@ -46,7 +46,7 @@ export default async function CaseStudyPage({
             other context, so credibility and a way back live here, together */}
         <Link
           href="/"
-          className="focus-visible:ring-ring focus-visible:ring-offset-background group -mx-1 flex w-fit items-center gap-3 rounded-sm px-1 py-1 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          className="focus-visible:ring-ring focus-visible:ring-offset-background group -mx-1 flex w-fit items-center gap-3 rounded-sm px-1 py-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
         >
           <span
             aria-hidden="true"
@@ -54,7 +54,7 @@ export default async function CaseStudyPage({
           >
             ←
           </span>
-          <Avatar className="size-9 shrink-0">
+          <Avatar className="size-9 shrink-0 transition-opacity duration-200 ease-out group-hover:opacity-80">
             <AvatarImage src="/raulplascencia.jpg" alt="" />
             <AvatarFallback className="text-xs">RP</AvatarFallback>
           </Avatar>
