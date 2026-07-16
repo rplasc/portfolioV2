@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Project } from "@/data/projects";
-import { actionLinkClass } from "@/lib/link-styles";
+import { PrimaryActionLink, SecondaryActionLink } from "@/components/action-link";
 
 export function FeaturedProjectCard({
   project,
@@ -39,36 +39,24 @@ export function FeaturedProjectCard({
         {project.details}
       </p>
 
-      <p className="text-muted-foreground/70 font-mono text-xs">
+      <p className="text-muted-foreground font-mono text-xs">
         {project.stack.join(" · ")}
       </p>
 
       {(hasCaseStudy || project.github || project.demo) && (
         <div className="mt-1 flex flex-wrap gap-6">
           {hasCaseStudy && (
-            <Link href={`/work/${project.slug}`} className={actionLinkClass}>
-              Case study →
-            </Link>
+            <PrimaryActionLink href={`/work/${project.slug}`}>
+              Case study
+            </PrimaryActionLink>
           )}
           {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={actionLinkClass}
-            >
-              GitHub →
-            </a>
+            <SecondaryActionLink href={project.github}>
+              GitHub
+            </SecondaryActionLink>
           )}
           {project.demo && (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={actionLinkClass}
-            >
-              Demo →
-            </a>
+            <SecondaryActionLink href={project.demo}>Demo</SecondaryActionLink>
           )}
         </div>
       )}

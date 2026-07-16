@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Project } from "@/data/projects";
-import { actionLinkClass } from "@/lib/link-styles";
+import { SecondaryActionLink } from "@/components/action-link";
 
 export function ProjectListItem({ project }: { project: Project }) {
   const hasCaseStudy = project.slug !== "";
@@ -24,24 +24,14 @@ export function ProjectListItem({ project }: { project: Project }) {
         {hasActions && (
           <div className="flex shrink-0 flex-wrap justify-end gap-4">
             {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={actionLinkClass}
-              >
-                GitHub →
-              </a>
+              <SecondaryActionLink href={project.github}>
+                GitHub
+              </SecondaryActionLink>
             )}
             {project.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={actionLinkClass}
-              >
-                Demo →
-              </a>
+              <SecondaryActionLink href={project.demo}>
+                Demo
+              </SecondaryActionLink>
             )}
           </div>
         )}
@@ -50,7 +40,7 @@ export function ProjectListItem({ project }: { project: Project }) {
       <p className="text-foreground/75 mt-1 max-w-prose text-base leading-relaxed">
         {project.details}
       </p>
-      <p className="text-muted-foreground/70 font-mono text-xs">
+      <p className="text-muted-foreground font-mono text-xs">
         {project.stack.join(" · ")}
       </p>
     </li>

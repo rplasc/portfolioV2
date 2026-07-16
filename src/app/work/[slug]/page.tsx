@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { caseStudies } from "@/data/case-studies";
-import { actionLinkClass } from "@/lib/link-styles";
+import { SecondaryActionLink } from "@/components/action-link";
 
 export function generateStaticParams() {
   return Object.keys(caseStudies).map((slug) => ({ slug }));
@@ -22,6 +23,9 @@ export async function generateMetadata({
   };
 }
 
+// text-link is reserved for actual links elsewhere on this page, so section
+// labels — including Outcome — stay neutral; the payoff paragraph itself
+// carries the emphasis via size/weight, not color.
 const sectionLabelClass =
   "text-muted-foreground/70 shrink-0 font-mono text-xs font-semibold tracking-[0.2em] uppercase md:w-40 md:pt-1";
 
@@ -48,12 +52,10 @@ export default async function CaseStudyPage({
           href="/"
           className="focus-visible:ring-ring focus-visible:ring-offset-background group -mx-1 flex w-fit items-center gap-3 rounded-sm px-1 py-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
         >
-          <span
+          <ArrowLeft
             aria-hidden="true"
-            className="text-muted-foreground group-hover:text-link font-mono text-xs transition-colors duration-200 ease-out"
-          >
-            ←
-          </span>
+            className="text-muted-foreground group-hover:text-link size-4 shrink-0 transition-colors duration-200 ease-out"
+          />
           <Avatar className="size-9 shrink-0 transition-opacity duration-200 ease-out group-hover:opacity-80">
             <AvatarImage src="/raulplascencia.jpg" alt="" />
             <AvatarFallback className="text-xs">RP</AvatarFallback>
@@ -74,10 +76,10 @@ export default async function CaseStudyPage({
             {study.title}
           </h1>
           <p className="text-muted-foreground text-sm">{study.tagline}</p>
-          <p className="text-muted-foreground/70 mt-1 font-mono text-xs tracking-wide">
+          <p className="text-muted-foreground mt-1 font-mono text-xs tracking-wide">
             {contextLine}
           </p>
-          <p className="text-muted-foreground/50 font-mono text-xs">
+          <p className="text-muted-foreground font-mono text-xs">
             {study.stack.join(" · ")}
           </p>
         </section>
@@ -117,7 +119,7 @@ export default async function CaseStudyPage({
         {study.outcome && (
           <section className="mt-28 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
             <h2 className={sectionLabelClass}>Outcome</h2>
-            <p className="text-foreground/90 max-w-prose flex-1 text-base font-medium leading-relaxed">
+            <p className="text-foreground/95 max-w-prose flex-1 text-lg leading-snug font-medium tracking-tight">
               {study.outcome}
             </p>
           </section>
@@ -131,24 +133,14 @@ export default async function CaseStudyPage({
             <h2 className={sectionLabelClass}>Links</h2>
             <div className="flex flex-1 flex-wrap gap-6">
               {study.github && (
-                <a
-                  href={study.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={actionLinkClass}
-                >
-                  GitHub →
-                </a>
+                <SecondaryActionLink href={study.github}>
+                  GitHub
+                </SecondaryActionLink>
               )}
               {study.demo && (
-                <a
-                  href={study.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={actionLinkClass}
-                >
-                  Demo →
-                </a>
+                <SecondaryActionLink href={study.demo}>
+                  Demo
+                </SecondaryActionLink>
               )}
             </div>
           </section>
