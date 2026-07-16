@@ -43,7 +43,7 @@ export default async function CaseStudyPage({
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-20">
         <Link
           href="/"
-          className="focus-visible:ring-ring focus-visible:ring-offset-background text-muted-foreground decoration-foreground/25 hover:text-foreground/75 hover:decoration-foreground/60 -mx-1 w-fit rounded-sm px-1 font-mono text-xs tracking-[0.2em] uppercase underline underline-offset-2 transition-colors duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          className="focus-visible:ring-ring focus-visible:ring-offset-background text-link decoration-link/30 hover:decoration-link -mx-1 w-fit rounded-sm px-1 font-mono text-xs tracking-[0.2em] uppercase underline underline-offset-2 transition-colors duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
         >
           ← Back
         </Link>

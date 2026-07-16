@@ -20,7 +20,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-muted-foreground hover:bg-accent hover:text-foreground focus-visible:ring-ring focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-sm transition-[color,background-color] duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            className="text-muted-foreground hover:bg-accent hover:text-link focus-visible:ring-ring focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-sm transition-[color,background-color] duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
@@ -29,7 +29,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-muted-foreground hover:bg-accent hover:text-foreground focus-visible:ring-ring focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-sm transition-[color,background-color] duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            className="text-muted-foreground hover:bg-accent hover:text-link focus-visible:ring-ring focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-sm transition-[color,background-color] duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>

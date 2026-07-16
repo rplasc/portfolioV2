@@ -30,7 +30,7 @@ export default function Home() {
 
             <div className="flex justify-center gap-3 md:justify-start">
               <Button
-                className="rounded-sm bg-foreground px-8 text-background hover:bg-foreground/90"
+                className="rounded-sm bg-primary px-8 text-primary-foreground hover:bg-primary/90"
                 asChild
                 size="lg"
               >
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <a
               href={`mailto:${contact.email}`}
-              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 text-base text-foreground underline decoration-foreground/35 underline-offset-2 transition-colors duration-200 ease-out hover:decoration-foreground/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background text-link decoration-link/40 hover:decoration-link -mx-1 w-fit rounded-sm px-1 text-base underline underline-offset-2 transition-colors duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {contact.email}
             </a>

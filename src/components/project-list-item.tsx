@@ -13,7 +13,7 @@ export function ProjectListItem({ project }: { project: Project }) {
           {hasCaseStudy ? (
             <Link
               href={`/work/${project.slug}`}
-              className="focus-visible:ring-ring focus-visible:ring-offset-background decoration-foreground/25 hover:decoration-foreground/75 -mx-1 rounded-sm px-1 underline underline-offset-2 transition-colors duration-200 ease-out hover:text-foreground focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background text-link decoration-link/30 hover:decoration-link -mx-1 rounded-sm px-1 underline underline-offset-2 transition-colors duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {project.name}
             </Link>
