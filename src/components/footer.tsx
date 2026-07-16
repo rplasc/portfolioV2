@@ -3,6 +3,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { contact } from "@/data/contact";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -32,6 +33,7 @@ export function Footer() {
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
+          <ThemeToggle />
         </div>
       </div>
     </footer>

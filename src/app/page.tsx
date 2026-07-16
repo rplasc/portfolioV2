@@ -20,17 +20,17 @@ export default function Home() {
 
           <div className="flex flex-col gap-6 text-center md:text-left">
             <div className="flex flex-col gap-2">
-              <h1 className="text-5xl leading-[1.02] font-bold tracking-[-0.03em] text-white/95 md:text-6xl md:tracking-[-0.04em]">
+              <h1 className="text-5xl leading-[1.02] font-bold tracking-[-0.03em] text-foreground/95 md:text-6xl md:tracking-[-0.04em]">
                 Raul Plascencia
               </h1>
-              <p className="font-mono text-sm tracking-wide text-white/65">
+              <p className="font-mono text-sm tracking-wide text-muted-foreground">
                 Full-stack Software Engineer
               </p>
             </div>
 
             <div className="flex justify-center gap-3 md:justify-start">
               <Button
-                className="rounded-sm bg-white px-8 text-slate-950 hover:bg-white/90"
+                className="rounded-sm bg-foreground px-8 text-background hover:bg-foreground/90"
                 asChild
                 size="lg"
               >
@@ -44,7 +44,7 @@ export default function Home() {
 
         {/* Social proof — inline row, no bordered strip */}
         <section className="mt-16 flex flex-col gap-4 md:flex-row md:items-center md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-white/40 uppercase md:w-40">
+          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40">
             Previously at
           </h2>
           <div className="flex flex-1 flex-wrap items-center gap-x-8 gap-y-3">
@@ -57,7 +57,7 @@ export default function Home() {
                   height={20}
                   className="rounded-sm"
                 />
-                <span className="text-sm text-white/65">{employer.name}</span>
+                <span className="text-sm text-muted-foreground">{employer.name}</span>
               </div>
             ))}
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
 
         {/* Featured — big beat */}
         <section className="mt-28 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-white/40 uppercase md:w-40 md:pt-1">
+          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40 md:pt-1">
             Featured
           </h2>
           <div className="flex flex-1 flex-col gap-10">
@@ -81,10 +81,10 @@ export default function Home() {
 
         {/* More projects — tight beat, same act */}
         <section className="mt-16 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-white/40 uppercase md:w-40 md:pt-1">
+          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40 md:pt-1">
             More projects
           </h2>
-          <ul className="flex flex-1 flex-col divide-y divide-white/10">
+          <ul className="flex flex-1 flex-col divide-y divide-border">
             {otherProjects.map((project) => (
               <ProjectListItem key={project.name} project={project} />
             ))}
@@ -93,13 +93,13 @@ export default function Home() {
 
         {/* Contact */}
         <section className="mt-28 flex flex-col gap-4 md:flex-row md:items-start md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-white/40 uppercase md:w-40">
+          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40">
             Contact
           </h2>
           <div className="flex flex-col gap-2">
             <a
               href={`mailto:${contact.email}`}
-              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 text-base text-white underline decoration-white/35 underline-offset-2 transition-colors duration-200 ease-out hover:decoration-white/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 text-base text-foreground underline decoration-foreground/35 underline-offset-2 transition-colors duration-200 ease-out hover:decoration-foreground/80 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {contact.email}
             </a>

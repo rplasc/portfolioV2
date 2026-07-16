@@ -22,7 +22,7 @@ export async function generateMetadata({
 }
 
 const sectionLabelClass =
-  "shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-white/40 uppercase md:w-40 md:pt-1";
+  "text-muted-foreground/70 shrink-0 font-mono text-xs font-semibold tracking-[0.2em] uppercase md:w-40 md:pt-1";
 
 export default async function CaseStudyPage({
   params,
@@ -43,21 +43,21 @@ export default async function CaseStudyPage({
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-20">
         <Link
           href="/"
-          className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 w-fit rounded-sm px-1 font-mono text-xs tracking-[0.2em] text-white/50 uppercase underline underline-offset-2 decoration-white/25 transition-colors duration-200 ease-out hover:text-white/75 hover:decoration-white/60 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+          className="focus-visible:ring-ring focus-visible:ring-offset-background text-muted-foreground decoration-foreground/25 hover:text-foreground/75 hover:decoration-foreground/60 -mx-1 w-fit rounded-sm px-1 font-mono text-xs tracking-[0.2em] uppercase underline underline-offset-2 transition-colors duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
         >
           ← Back
         </Link>
 
         {/* Title block — identity first */}
         <section className="mt-12 flex flex-col gap-2">
-          <h1 className="text-4xl leading-[1.05] font-semibold tracking-[-0.02em] text-white/95 md:text-5xl">
+          <h1 className="text-foreground/95 text-4xl leading-[1.05] font-semibold tracking-[-0.02em] md:text-5xl">
             {study.title}
           </h1>
-          <p className="text-sm text-white/65">{study.tagline}</p>
-          <p className="mt-1 font-mono text-xs tracking-wide text-white/40">
+          <p className="text-muted-foreground text-sm">{study.tagline}</p>
+          <p className="text-muted-foreground/70 mt-1 font-mono text-xs tracking-wide">
             {contextLine}
           </p>
-          <p className="font-mono text-xs text-white/30">
+          <p className="text-muted-foreground/50 font-mono text-xs">
             {study.stack.join(" · ")}
           </p>
         </section>
@@ -65,7 +65,7 @@ export default async function CaseStudyPage({
         {/* Overview — the story, first and most important */}
         <section className="mt-16 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
           <h2 className={sectionLabelClass}>Overview</h2>
-          <p className="max-w-prose flex-1 text-base leading-relaxed text-white/75">
+          <p className="text-foreground/75 max-w-prose flex-1 text-base leading-relaxed">
             {study.overview}
           </p>
         </section>
@@ -73,19 +73,19 @@ export default async function CaseStudyPage({
         {/* Highlights — supporting evidence */}
         <section className="mt-16 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
           <h2 className={sectionLabelClass}>Highlights</h2>
-          <ul className="flex flex-1 flex-col divide-y divide-white/10">
+          <ul className="divide-border flex flex-1 flex-col divide-y">
             {study.highlights.map((highlight) => (
               <li
                 key={highlight}
                 className="flex gap-3 py-4 first:pt-0 last:pb-0"
               >
                 <span
-                  className="mt-px shrink-0 font-mono text-xs text-white/25"
+                  className="text-muted-foreground/50 mt-px shrink-0 font-mono text-xs"
                   aria-hidden="true"
                 >
                   —
                 </span>
-                <span className="text-sm leading-relaxed text-white/75">
+                <span className="text-foreground/75 text-sm leading-relaxed">
                   {highlight}
                 </span>
               </li>
@@ -97,7 +97,7 @@ export default async function CaseStudyPage({
         {study.outcome && (
           <section className="mt-28 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
             <h2 className={sectionLabelClass}>Outcome</h2>
-            <p className="max-w-prose flex-1 text-base font-medium leading-relaxed text-white/90">
+            <p className="text-foreground/90 max-w-prose flex-1 text-base font-medium leading-relaxed">
               {study.outcome}
             </p>
           </section>

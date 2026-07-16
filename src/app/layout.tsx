@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
+
+const THEME_INIT_SCRIPT = `
+  try {
+    var stored = localStorage.getItem("theme");
+    document.documentElement.classList.toggle("dark", stored !== "light");
+  } catch (e) {}
+`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn(
         "dark",
         "h-full",
@@ -43,6 +52,13 @@ export default function RootLayout({
         "font-sans",
       )}
     >
+      <head>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         {children}
         <Footer />

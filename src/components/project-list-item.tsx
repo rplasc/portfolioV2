@@ -9,11 +9,11 @@ export function ProjectListItem({ project }: { project: Project }) {
   return (
     <li className="flex flex-col gap-1 py-5 first:pt-0 last:pb-0">
       <div className="flex items-baseline justify-between gap-4">
-        <h3 className="text-base font-medium text-white/95">
+        <h3 className="text-foreground/95 text-base font-medium">
           {hasCaseStudy ? (
             <Link
               href={`/work/${project.slug}`}
-              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 rounded-sm px-1 underline underline-offset-2 decoration-white/25 transition-colors duration-200 ease-out hover:text-white hover:decoration-white/75 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background decoration-foreground/25 hover:decoration-foreground/75 -mx-1 rounded-sm px-1 underline underline-offset-2 transition-colors duration-200 ease-out hover:text-foreground focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {project.name}
             </Link>
@@ -46,11 +46,11 @@ export function ProjectListItem({ project }: { project: Project }) {
           </div>
         )}
       </div>
-      <p className="text-sm text-white/65">{project.description}</p>
-      <p className="mt-1 max-w-prose text-base leading-relaxed text-white/75">
+      <p className="text-muted-foreground text-sm">{project.description}</p>
+      <p className="text-foreground/75 mt-1 max-w-prose text-base leading-relaxed">
         {project.details}
       </p>
-      <p className="font-mono text-xs text-white/40">
+      <p className="text-muted-foreground/70 font-mono text-xs">
         {project.stack.join(" · ")}
       </p>
     </li>

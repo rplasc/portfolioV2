@@ -15,16 +15,16 @@ export function FeaturedProjectCard({
     <article
       className={
         bordered
-          ? "flex flex-col gap-3 border-t border-white/10 pt-10"
+          ? "border-border flex flex-col gap-3 border-t pt-10"
           : "flex flex-col gap-3"
       }
     >
       <div className="flex flex-col gap-1">
-        <h3 className="text-xl font-semibold tracking-tight text-white/95">
+        <h3 className="text-foreground/95 text-xl font-semibold tracking-tight">
           {hasCaseStudy ? (
             <Link
               href={`/work/${project.slug}`}
-              className="focus-visible:ring-ring focus-visible:ring-offset-background -mx-1 rounded-sm px-1 underline underline-offset-2 decoration-white/25 transition-colors duration-200 ease-out hover:text-white hover:decoration-white/75 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="focus-visible:ring-ring focus-visible:ring-offset-background decoration-foreground/25 hover:decoration-foreground/75 -mx-1 rounded-sm px-1 underline underline-offset-2 transition-colors duration-200 ease-out hover:text-foreground focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {project.name}
             </Link>
@@ -32,14 +32,14 @@ export function FeaturedProjectCard({
             project.name
           )}
         </h3>
-        <p className="text-sm text-white/65">{project.description}</p>
+        <p className="text-muted-foreground text-sm">{project.description}</p>
       </div>
 
-      <p className="max-w-prose text-base leading-relaxed text-white/75">
+      <p className="text-foreground/75 max-w-prose text-base leading-relaxed">
         {project.details}
       </p>
 
-      <p className="font-mono text-xs text-white/40">
+      <p className="text-muted-foreground/70 font-mono text-xs">
         {project.stack.join(" · ")}
       </p>
 
