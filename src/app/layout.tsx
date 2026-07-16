@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
@@ -52,14 +51,11 @@ export default function RootLayout({
         "font-sans",
       )}
     >
-      <head>
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
+      <body className="flex min-h-full flex-col">
+        <script
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
         />
-      </head>
-      <body className="flex min-h-full flex-col">
         {children}
         <Footer />
       </body>
