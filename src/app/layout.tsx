@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
+import { SiteNav } from "@/components/site-nav";
 
 const THEME_INIT_SCRIPT = `
   try {
@@ -56,6 +57,7 @@ export default function RootLayout({
           suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
         />
+        <SiteNav />
         {children}
         <Footer />
       </body>

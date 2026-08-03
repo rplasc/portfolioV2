@@ -131,3 +131,36 @@
     @apply font-sans;
   }
 }
+
+/* Entrance used for the project groups — on first paint and, via a keyed
+   remount, each time the filter changes. Confident deceleration (ease-out-quint),
+   transform + opacity only so it stays on the GPU. */
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer utilities {
+  .animate-fade-rise {
+    animation: fade-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* Respect users who ask for less motion — neutralize animation and transitions
+   everywhere rather than per-component. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

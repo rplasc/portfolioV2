@@ -105,4 +105,23 @@ export const caseStudies: Record<string, CaseStudy> = {
     github: "https://github.com/rplasc/personality-matrix",
     demo: "https://personality-matrix.raulplascencia.dev",
   },
+  "survivor-clone-unity": {
+    slug: "survivor-clone-unity",
+    title: "Vampire Survivors Clone (Unity)",
+    tagline: "A top-down action roguelike inspired by Vampire Survivors",
+    role: "Creator",
+    timeframe: "2026 – Present",
+    stack: ["Unity", "C#"],
+    overview: "A top-down action roguelike inspired by Vampire Survivors",
+    highlights: [
+      "Implemented player movement, enemy spawning, and upgrades with C#.",
+      "Recreated the core gameplay mechanics and added performance optimizations.",
+      "Enhanced the user interface with Unity-specific features.",
+      "Optimized the game for better frame rates and smoother gameplay.",
+    ],
+    outcome:
+      "Recreated a Vampire Survivors-inspired roguelike using Unity, with added performance optimizations and Unity-specific enhancements.",
+    github: "https://github.com/rplasc/survivor-clone-unity",
+    demo: "",
+  },
 };

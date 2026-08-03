@@ -2,12 +2,35 @@ import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { previousEmployers } from "@/data/employers";
-import { featuredProjects, otherProjects } from "@/data/projects";
+import {
+  projects,
+  featuredProjects,
+  otherProjects,
+  projectCategories,
+} from "@/data/projects";
 import { contact } from "@/data/contact";
-import { ProjectListItem } from "@/components/project-list-item";
 import { FeaturedProjectCard } from "@/components/featured-project-card";
+import { PrimaryActionLink } from "@/components/action-link";
+
+// "web apps, games, and mobile" — Oxford-joined, for the teaser sentence.
+function joinNatural(items: string[]) {
+  if (items.length <= 1) return items.join("");
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+}
 
 export default function Home() {
+  // The home page only shows featured work; everything else lives on /projects.
+  // Both the count and the type chips are derived from data so they stay honest
+  // as categories fill in
+  const moreCount = otherProjects.length;
+  const presentCategories = projectCategories.filter((category) =>
+    projects.some((project) => project.category === category),
+  );
+  const categoryPhrase = joinNatural(
+    presentCategories.map((category) => category.toLowerCase()),
+  );
+
   return (
     <div className="flex flex-1 flex-col">
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-20">
@@ -20,17 +43,17 @@ export default function Home() {
 
           <div className="flex flex-col gap-6 text-center md:text-left">
             <div className="flex flex-col gap-2">
-              <h1 className="text-5xl leading-[1.02] font-bold tracking-[-0.03em] text-foreground/95 md:text-6xl md:tracking-[-0.04em]">
+              <h1 className="text-foreground/95 text-5xl leading-[1.02] font-bold tracking-[-0.03em] md:text-6xl md:tracking-[-0.04em]">
                 Raul Plascencia
               </h1>
-              <p className="font-mono text-sm tracking-wide text-muted-foreground">
+              <p className="text-muted-foreground font-mono text-sm tracking-wide">
                 Full-stack Software Engineer
               </p>
             </div>
 
             <div className="flex justify-center gap-3 md:justify-start">
               <Button
-                className="rounded-sm bg-primary px-8 text-primary-foreground hover:bg-primary/90"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm px-8"
                 asChild
                 size="lg"
               >
@@ -44,7 +67,7 @@ export default function Home() {
 
         {/* Social proof — inline row, no bordered strip */}
         <section className="mt-16 flex flex-col gap-4 md:flex-row md:items-center md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40">
+          <h2 className="text-muted-foreground/70 shrink-0 font-mono text-xs font-semibold tracking-[0.2em] uppercase md:w-40">
             Previously at
           </h2>
           <div className="flex flex-1 flex-wrap items-center gap-x-8 gap-y-3">
@@ -67,7 +90,7 @@ export default function Home() {
 
         {/* Featured — big beat */}
         <section className="mt-28 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40 md:pt-1">
+          <h2 className="text-muted-foreground/70 shrink-0 font-mono text-xs font-semibold tracking-[0.2em] uppercase md:w-40 md:pt-1">
             Featured
           </h2>
           <div className="flex flex-1 flex-col gap-10">
@@ -81,21 +104,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* More projects — tight beat, same act */}
+        {/* More projects — now a gateway into the dedicated Projects page */}
         <section className="mt-16 flex flex-col gap-6 md:flex-row md:items-start md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40 md:pt-1">
+          <h2 className="text-muted-foreground/70 shrink-0 font-mono text-xs font-semibold tracking-[0.2em] uppercase md:w-40 md:pt-1">
             More projects
           </h2>
-          <ul className="flex flex-1 flex-col divide-y divide-border">
-            {otherProjects.map((project) => (
-              <ProjectListItem key={project.name} project={project} />
-            ))}
-          </ul>
+          <div className="flex flex-1 flex-col gap-5">
+            <p className="text-foreground/75 max-w-prose text-base leading-relaxed">
+              {moreCount} more projects across {categoryPhrase} — organized by
+              type.
+            </p>
+            <div className="mt-1">
+              <PrimaryActionLink href="/projects">
+                View all projects
+              </PrimaryActionLink>
+            </div>
+          </div>
         </section>
 
         {/* Contact */}
         <section className="mt-28 flex flex-col gap-4 md:flex-row md:items-start md:gap-12">
-          <h2 className="shrink-0 font-mono text-xs font-semibold tracking-[0.2em] text-muted-foreground/70 uppercase md:w-40">
+          <h2 className="text-muted-foreground/70 shrink-0 font-mono text-xs font-semibold tracking-[0.2em] uppercase md:w-40">
             Contact
           </h2>
           <div className="flex flex-col gap-2">

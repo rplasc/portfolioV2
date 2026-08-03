@@ -1,6 +1,18 @@
+export type ProjectCategory = "Web Apps" | "Games" | "3D Modeling" | "Mobile";
+
+// Fixed taxonomy, rendered in this order. Categories can be empty — the filter
+// still shows every chip so the site's scope stays legible as projects are added.
+export const projectCategories: ProjectCategory[] = [
+  "Web Apps",
+  "Games",
+  "3D Modeling",
+  "Mobile",
+];
+
 export interface Project {
   name: string;
   slug: string;
+  category: ProjectCategory;
   description: string;
   stack: string[];
   details: string;
@@ -13,6 +25,7 @@ export const projects: Project[] = [
   {
     name: "Capstone Project — Mobile App & Cloud Server",
     slug: "sweep",
+    category: "Mobile",
     description:
       "Cross-platform file syncing experience built for a real client",
     stack: ["React Native", "Flask", "Rclone"],
@@ -25,6 +38,7 @@ export const projects: Project[] = [
   {
     name: "Songwriting Assistant",
     slug: "songwriting-assistant",
+    category: "Web Apps",
     description:
       "Bilingual songwriting tool with real-time syllable tracking and rhyme suggestions",
     stack: ["Python", "NestJS", "NextJS"],
@@ -37,6 +51,7 @@ export const projects: Project[] = [
   {
     name: "Chopperbot",
     slug: "chopperbot",
+    category: "Web Apps",
     description:
       "Self-hosted Discord assistant with persistent conversational memory",
     stack: ["Python", "Discord.py", "OpenAI", "KoboldCPP"],
@@ -49,6 +64,7 @@ export const projects: Project[] = [
   {
     name: "Image Editor",
     slug: "",
+    category: "Web Apps",
     description: "Desktop image editor for fast everyday photo adjustments",
     stack: ["C++", "Qt Framework"],
     details:
@@ -60,6 +76,7 @@ export const projects: Project[] = [
   {
     name: "Birthday Site",
     slug: "",
+    category: "Web Apps",
     description: "A retro-style website that lets users send birthday wishes",
     stack: ["NextJS", "CSS"],
     details:
@@ -71,6 +88,7 @@ export const projects: Project[] = [
   {
     name: "Personality Matrix",
     slug: "personality-matrix",
+    category: "Web Apps",
     description:
       "28-question personality quiz that assigns you a narrative archetype, built over a weekend",
     stack: ["React", "PostgreSQL", "Prisma"],
@@ -78,6 +96,31 @@ export const projects: Project[] = [
       "Built a personality quiz that scores responses and generates a profile. React handles the frontend; PostgreSQL and Prisma manage quiz data and results on the backend.",
     github: "https://github.com/rplasc/personality-matrix",
     demo: "https://personality-matrix.raulplascencia.dev",
+    featured: false,
+  },
+  {
+    name: "Vampire Survivors Clone (Godot)",
+    slug: "",
+    category: "Games",
+    description:
+      "A Vampire Survivors-style roguelike, originally built in Godot",
+    stack: ["Godot", "GDScript"],
+    details:
+      "Built a Vampire Survivors-inspired roguelike in Godot. Implemented player movement, enemy spawning, and upgrades with GDScript.",
+    github: "https://github.com/rplasc/survivor-clone-godot",
+    demo: "",
+    featured: false,
+  },
+  {
+    name: "Vampire Survivors Clone (Unity)",
+    slug: "survivor-clone-unity",
+    category: "Games",
+    description: "The same roguelike, rebuilt in Unity for better performance",
+    stack: ["Unity", "C#"],
+    details:
+      "Recreated a Vampire Survivors-inspired roguelike using Unity. Implemented same features as the Godot version, but with added performance optimizations and Unity-specific enhancements.",
+    github: "https://github.com/rplasc/survivor-clone-unity",
+    demo: "",
     featured: false,
   },
 ];

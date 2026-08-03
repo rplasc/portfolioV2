@@ -7,7 +7,7 @@ export function ProjectListItem({ project }: { project: Project }) {
   const hasActions = Boolean(project.github || project.demo);
 
   return (
-    <li className="flex flex-col gap-1 py-5 first:pt-0 last:pb-0">
+    <li className="flex flex-col gap-1.5 py-5 first:pt-0 last:pb-0">
       <div className="flex items-baseline justify-between gap-4">
         <h3 className="text-foreground/95 text-base font-medium">
           {hasCaseStudy ? (
@@ -36,10 +36,9 @@ export function ProjectListItem({ project }: { project: Project }) {
           </div>
         )}
       </div>
+      {/* The index stays scannable — the full `details` paragraph lives on the
+          case study (or the home featured card), not on every row here */}
       <p className="text-muted-foreground text-sm">{project.description}</p>
-      <p className="text-foreground/75 mt-1 max-w-prose text-base leading-relaxed">
-        {project.details}
-      </p>
       <p className="text-muted-foreground font-mono text-xs">
         {project.stack.join(" · ")}
       </p>

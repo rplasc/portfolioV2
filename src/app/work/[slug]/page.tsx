@@ -1,7 +1,4 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { caseStudies } from "@/data/case-studies";
 import { SecondaryActionLink } from "@/components/action-link";
 
@@ -46,32 +43,8 @@ export default async function CaseStudyPage({
   return (
     <div className="flex flex-1 flex-col">
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-20">
-        {/* Identity strip — this page can arrive via a shared link with no
-            other context, so credibility and a way back live here, together */}
-        <Link
-          href="/"
-          className="focus-visible:ring-ring focus-visible:ring-offset-background group -mx-1 flex w-fit items-center gap-3 rounded-sm px-1 py-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-        >
-          <ArrowLeft
-            aria-hidden="true"
-            className="text-muted-foreground group-hover:text-link size-4 shrink-0 transition-colors duration-200 ease-out"
-          />
-          <Avatar className="size-9 shrink-0 transition-opacity duration-200 ease-out group-hover:opacity-80">
-            <AvatarImage src="/raulplascencia.jpg" alt="" />
-            <AvatarFallback className="text-xs">RP</AvatarFallback>
-          </Avatar>
-          <span className="flex flex-col leading-tight">
-            <span className="text-foreground/95 group-hover:text-link text-sm font-medium transition-colors duration-200 ease-out">
-              Raul Plascencia
-            </span>
-            <span className="text-muted-foreground font-mono text-xs tracking-wide">
-              Full-stack Software Engineer
-            </span>
-          </span>
-        </Link>
-
-        {/* Title block — identity first */}
-        <section className="mt-12 flex flex-col gap-2">
+        {/* Title block — the global nav handles the way back */}
+        <section className="flex flex-col gap-2">
           <h1 className="text-foreground/95 text-4xl leading-[1.05] font-semibold tracking-[-0.02em] md:text-5xl">
             {study.title}
           </h1>
