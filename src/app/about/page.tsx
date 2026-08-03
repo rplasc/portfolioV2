@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ProfilePhoto } from "@/components/profile-photo";
 import { SecondaryActionLink } from "@/components/action-link";
 import { previousEmployers } from "@/data/employers";
 import { contact } from "@/data/contact";
@@ -34,10 +34,7 @@ export default function AboutPage() {
           {/* Identity rail — the human anchor and how to reach it, held in view
               as the bio is read */}
           <aside className="flex flex-col gap-8 md:sticky md:top-24 md:w-56 md:shrink-0">
-            <Avatar className="size-36 shrink-0">
-              <AvatarImage src="/raulplascencia.jpg" alt="Raul Plascencia" />
-              <AvatarFallback className="text-3xl">RP</AvatarFallback>
-            </Avatar>
+            <ProfilePhoto priority className="size-36" />
 
             <div className="flex flex-col gap-4">
               <h2 className={labelClass}>Contact</h2>

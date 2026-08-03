@@ -1,8 +1,7 @@
 "use client";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { contact } from "@/data/contact";
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Footer() {
@@ -22,7 +21,7 @@ export function Footer() {
             aria-label="LinkedIn"
             className="text-muted-foreground hover:bg-accent hover:text-link focus-visible:ring-ring focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-sm transition-[color,background-color] duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
-            <FontAwesomeIcon icon={faLinkedin} />
+            <LinkedinIcon className="size-5" />
           </a>
           <a
             href={contact.github}
@@ -31,7 +30,7 @@ export function Footer() {
             aria-label="GitHub"
             className="text-muted-foreground hover:bg-accent hover:text-link focus-visible:ring-ring focus-visible:ring-offset-background flex size-11 items-center justify-center rounded-sm transition-[color,background-color] duration-200 ease-out focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <GithubIcon className="size-5" />
           </a>
           <ThemeToggle />
         </div>

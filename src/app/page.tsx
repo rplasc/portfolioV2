@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { ProfilePhoto } from "@/components/profile-photo";
 import { previousEmployers } from "@/data/employers";
 import {
   projects,
@@ -36,10 +36,10 @@ export default function Home() {
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-6 py-20">
         {/* Identity + CTA — asymmetric on md+ */}
         <section className="flex flex-col gap-8 md:flex-row md:items-center md:gap-10">
-          <Avatar className="mx-auto size-32 shrink-0 md:mx-0 md:size-36">
-            <AvatarImage src="/raulplascencia.jpg" alt="Raul Plascencia" />
-            <AvatarFallback className="text-3xl">RP</AvatarFallback>
-          </Avatar>
+          <ProfilePhoto
+            priority
+            className="mx-auto size-32 md:mx-0 md:size-36"
+          />
 
           <div className="flex flex-col gap-6 text-center md:text-left">
             <div className="flex flex-col gap-2">

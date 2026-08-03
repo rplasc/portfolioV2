@@ -18,8 +18,7 @@ export function ProjectsExplorer({ projects }: { projects: Project[] }) {
   const presentCategories = projectCategories.filter((category) =>
     projects.some((project) => project.category === category),
   );
-  const visibleCategories =
-    filter === "All" ? presentCategories : [filter];
+  const visibleCategories = filter === "All" ? presentCategories : [filter];
 
   return (
     <div className="mt-10 flex flex-col gap-12">
