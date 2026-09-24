@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ProfilePhoto } from "@/components/profile-photo";
 import { SecondaryActionLink } from "@/components/action-link";
-import { previousEmployers } from "@/data/employers";
+import { currentEmployer, previousEmployers } from "@/data/employers";
 import { contact } from "@/data/contact";
 import { bio, moreInfo } from "@/data/about";
 
@@ -68,6 +68,22 @@ export default function AboutPage() {
               <p className="text-foreground/75 max-w-prose text-base leading-relaxed">
                 {bio}
               </p>
+            </section>
+
+            <section className="flex flex-col gap-4">
+              <h2 className={labelClass}>Currently at</h2>
+              <div className="flex items-center gap-2">
+                <Image
+                  src={currentEmployer.logo}
+                  alt={currentEmployer.name}
+                  width={20}
+                  height={20}
+                  className="rounded-sm"
+                />
+                <span className="text-muted-foreground text-sm">
+                  {currentEmployer.name}
+                </span>
+              </div>
             </section>
 
             <section className="flex flex-col gap-4">

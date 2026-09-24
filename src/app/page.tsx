@@ -49,7 +49,7 @@ export default function Home() {
               <p className="text-muted-foreground font-mono text-sm tracking-wide">
                 Full-stack Software Engineer
               </p>
-              <p className="mt-2 text-sm text-white/65">
+              <p className="text-muted-foreground mt-2 text-sm">
                 Currently training AI models at{" "}
                 <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap">
                   <Image
@@ -59,7 +59,9 @@ export default function Home() {
                     height={16}
                     className="translate-y-0.5 rounded-sm"
                   />
-                  <span className="text-white/85">{currentEmployer.name}</span>
+                  <span className="text-muted-foreground text-sm">
+                    {currentEmployer.name}
+                  </span>
                 </span>
               </p>
             </div>
