@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ProfilePhoto } from "@/components/profile-photo";
-import { previousEmployers } from "@/data/employers";
+import { previousEmployers, currentEmployer } from "@/data/employers";
 import {
   projects,
   featuredProjects,
@@ -48,6 +48,19 @@ export default function Home() {
               </h1>
               <p className="text-muted-foreground font-mono text-sm tracking-wide">
                 Full-stack Software Engineer
+              </p>
+              <p className="mt-2 text-sm text-white/65">
+                Currently training AI models at{" "}
+                <span className="inline-flex items-baseline gap-1.5 whitespace-nowrap">
+                  <Image
+                    src={currentEmployer.logo}
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="translate-y-0.5 rounded-sm"
+                  />
+                  <span className="text-white/85">{currentEmployer.name}</span>
+                </span>
               </p>
             </div>
 
@@ -111,7 +124,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-1 flex-col gap-5">
             <p className="text-foreground/75 max-w-prose text-base leading-relaxed">
-              {moreCount} more projects across {categoryPhrase} — organized by
+              {moreCount} more projects across {categoryPhrase}, organized by
               type.
             </p>
             <div className="mt-1">

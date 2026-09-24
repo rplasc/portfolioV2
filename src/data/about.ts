@@ -1,5 +1,5 @@
 export const bio =
-  "Full-stack software engineer who likes shipping useful tools, from client file-syncing apps to language tools and game prototypes. I move across the stack: Python and NestJS on the backend, React, React Native, and Next.js on the frontend, and C++ or a game engine when a project calls for it.";
+  "Full-stack software engineer who likes building useful tools, from client file-syncing apps to language tools and game prototypes. I work in Python and NestJS on the backend and React, React Native, and Next.js on the frontend, and I pick up C++ or a game engine when a project needs it.";
 
 export const moreInfo: string[] = [
   "I enjoy playing RPGs and rage-inducing hero shooters, but I have a soft spot for visual novels.",

@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-// Profile photo served through next/image (modern format + correctly sized)
-// instead of a raw <img>, while keeping the avatar's round shape and subtle ring.
-// Pass `priority` when it's above the fold so it isn't lazy-loaded.
 export function ProfilePhoto({
   className,
   priority = false,

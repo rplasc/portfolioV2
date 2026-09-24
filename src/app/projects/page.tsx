@@ -5,7 +5,7 @@ import { ProjectsExplorer } from "@/components/projects-explorer";
 export const metadata: Metadata = {
   title: "Projects — Raul Plascencia",
   description:
-    "Stuff I've built — client work and experiments, grouped by type.",
+    "Stuff I've built, from client work to experiments, grouped by type.",
 };
 
 export default function ProjectsPage() {

@@ -23,13 +23,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Raul Plascencia — Full-stack Software Engineer",
+  title: "Raul Plascencia - Full-stack Software Engineer",
   description:
-    "Full-stack software engineer at Gaine Technology. Previously at Handshake AI and Sweep.",
+    "AI Trainer at Handshake AI. Previously at Gaine Technology and Sweep.",
   openGraph: {
-    title: "Raul Plascencia — Full-stack Software Engineer",
+    title: "Raul Plascencia - Full-stack Software Engineer",
     description:
-      "Full-stack software engineer at Gaine Technology. Previously at Handshake AI and Sweep.",
+      "AI Trainer at Handshake AI. Previously at Gaine Technology and Sweep.",
     type: "website",
   },
 };

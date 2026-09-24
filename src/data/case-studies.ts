@@ -16,8 +16,8 @@ export interface CaseStudy {
 export const caseStudies: Record<string, CaseStudy> = {
   sweep: {
     slug: "sweep",
-    title: "Capstone Project — Mobile App & Cloud Server",
-    tagline: "Cross-platform file syncing experience built for a real client",
+    title: "Capstone Project: Mobile App and Cloud Server",
+    tagline: "Cross-platform file syncing app built for a real client",
     role: "Technical Lead",
     timeframe: "Jan 2025 – May 2025",
     location: "Merced, CA",
@@ -29,15 +29,15 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Dropbox API",
     ],
     overview:
-      "Sweep needed a way for its users to link multiple cloud storage accounts and move files to a dedicated server from a single mobile app. Our capstone team took the brief end-to-end: the backend orchestration, the OAuth plumbing to Google Drive and Dropbox, and the React Native client that tied it together. I led the engineering side of the build.",
+      "Sweep wanted users to link several cloud storage accounts and move files to a dedicated server from one mobile app. Our capstone team built all of it: the backend, the Google Drive and Dropbox OAuth integration, and the React Native client. I was the technical lead.",
     highlights: [
       "Led a four-person team and owned the technical roadmap through delivery.",
-      "Built a Flask API that brokered Google Drive and Dropbox OAuth flows and file operations.",
-      "Integrated Rclone so the server could move files reliably between providers without re-implementing each cloud's quirks.",
-      "Worked in React Native to stabilize the Android client: fewer sync failures, clearer flows.",
-      "Shipped ahead of the semester-end deadline with the client's feature list met.",
+      "Built a Flask API that handles Google Drive and Dropbox OAuth and file operations.",
+      "Used Rclone on the server to move files between providers, so we didn't have to handle each cloud's quirks ourselves.",
+      "Fixed sync failures and confusing flows in the React Native Android client.",
+      "Delivered before the semester deadline with every item on the client's feature list.",
     ],
-    outcome: "Delivered a production-ready build to Sweep before the deadline.",
+    outcome: "Handed Sweep a production-ready build ahead of the deadline.",
     github: "",
     demo: "https://sweep-ai.com",
   },
@@ -50,12 +50,12 @@ export const caseStudies: Record<string, CaseStudy> = {
     timeframe: "2023 – Present",
     stack: ["Python", "Discord.py", "OpenAI", "KoboldCPP", "SQLite"],
     overview:
-      "Chopperbot is a Discord companion I built to give communities a personality-driven assistant running on my homelab. It holds conversations, remembers past interactions, and ships with a handful of utilities my friends actually use.",
+      "Chopperbot is a Discord assistant with its own personality, built for my friends' communities and run on my homelab. It holds conversations, remembers past interactions, and includes a few utilities people actually use.",
     highlights: [
       "Serves 100+ users across multiple Discord communities.",
-      "Fine-tuned a local LLM on a private homelab so conversations stay self-hosted and off per-token billing.",
-      "SQLite-backed memory system keeps personality and context intact across sessions.",
-      "Plugin surface includes a web-search proxy, image generation, and news summaries.",
+      "Runs a fine-tuned local LLM on a private homelab, so conversations stay self-hosted and there's no per-token billing.",
+      "A SQLite memory system keeps personality and context across sessions.",
+      "Plugins include a web-search proxy, image generation, and news summaries.",
     ],
     github: "https://github.com/rplasc/ChopperBot",
     demo: "",
@@ -69,10 +69,10 @@ export const caseStudies: Record<string, CaseStudy> = {
     timeframe: "2025 – Present",
     stack: ["Python", "NestJS", "NextJS"],
     overview:
-      "I built the Songwriting Assistant to help with writing lyrics in English and Spanish. It gives real-time feedback on syllable counts and surfaces rhyme options as you type. The NLP work happens in Python, a NestJS API sits in the middle, and Next.js handles the frontend.",
+      "I built the Songwriting Assistant to help me write lyrics in English and Spanish. As you type, it counts syllables and suggests rhymes. Python handles the NLP, a NestJS API sits in the middle, and Next.js is the frontend.",
     highlights: [
-      "Provides real-time syllable tracking and rhyme suggestions in English and Spanish.",
-      "Lets songwriters save drafts locally.",
+      "Counts syllables and suggests rhymes in real time, in English and Spanish.",
+      "Saves drafts locally.",
     ],
     github: "https://github.com/rplasc/songwriting-assistant",
     demo: "",
@@ -81,7 +81,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     slug: "personality-matrix",
     title: "Personality Matrix",
     tagline:
-      "Personality quiz that assigns you a narrative archetype, styled as a classified dossier",
+      "Personality quiz that assigns a narrative archetype, presented as a classified dossier",
     role: "Creator & Maintainer",
     timeframe: "2026 – Present",
     stack: [
@@ -94,11 +94,11 @@ export const caseStudies: Record<string, CaseStudy> = {
       "PostHog",
     ],
     overview:
-      "Personality Matrix is a 28-question quiz that assigns you one of 19 narrative archetypes, styled as a classified document system. You answer questions, it scores your personality functions, and produces a dossier. Results are saved to a database and shareable by URL.",
+      "Personality Matrix is a 28-question quiz that assigns you one of 19 narrative archetypes and presents the result as a classified dossier. Your answers are scored across a set of personality functions. Results are saved to a database and shareable by URL.",
     highlights: [
-      "Scoring tracks eight personality functions (Plot Armor, Romantic Tension, Backstory Trauma, and others) across all 28 answers. Each answer shifts specific functions on a -2 to +2 scale, which normalize to 0-100 before feeding into eight matrix axes.",
-      "Archetype matching runs in tiers: two rare types require 78+ or 82+ on their dominant functions. The other 17 match by dominant function average with a small matrix bonus. All scoring logic lives in src/lib/.",
-      "Results are saved to PostgreSQL via Prisma and served at a unique URL, so users can share or return to their result.",
+      "Scoring tracks eight personality functions, such as Plot Armor, Romantic Tension, and Backstory Trauma. Each answer shifts specific functions on a -2 to +2 scale. Totals are normalized to 0-100 and feed eight matrix axes.",
+      "Archetype matching is tiered. Two rare types require 78+ or 82+ on their dominant functions. The other 17 match on dominant function average plus a small matrix bonus. All scoring logic is in src/lib/.",
+      "Results are stored in PostgreSQL through Prisma and served at a unique URL, so users can share a result or come back to it.",
       "PostHog tracks quiz completions and archetype distribution across real users.",
     ],
     outcome: "Went from idea to live product in a weekend.",
@@ -112,16 +112,36 @@ export const caseStudies: Record<string, CaseStudy> = {
     role: "Creator",
     timeframe: "2026 – Present",
     stack: ["Unity", "C#"],
-    overview: "A top-down action roguelike inspired by Vampire Survivors",
+    overview:
+      "A top-down action roguelike built in Unity and C#, inspired by Vampire Survivors.",
     highlights: [
-      "Implemented player movement, enemy spawning, and upgrades with C#.",
-      "Recreated the core gameplay mechanics and added performance optimizations.",
-      "Enhanced the user interface with Unity-specific features.",
-      "Optimized the game for better frame rates and smoother gameplay.",
+      "Wrote player movement, enemy spawning, and upgrades in C#.",
+      "Recreated the core gameplay loop.",
+      "Built the UI with Unity's built-in features.",
+      "Optimized for higher frame rates and smoother play.",
     ],
     outcome:
-      "Recreated a Vampire Survivors-inspired roguelike using Unity, with added performance optimizations and Unity-specific enhancements.",
+      "A Vampire Survivors-inspired roguelike built in Unity and tuned for performance.",
     github: "https://github.com/rplasc/survivor-clone-unity",
     demo: "",
+  },
+  "group-personality-quiz": {
+    slug: "group-personality-quiz",
+    title: "Group Personality Quiz Platform",
+    tagline: "A platform for analyzing personality in groups",
+    role: "Creator",
+    timeframe: "2026 – Present",
+    stack: ["NextJS", "PostgreSQL", "Prisma", "NestJS"],
+    overview:
+      "Users take personality quizzes together and get a collective analysis.",
+    highlights: [
+      "Built the frontend in Next.js (React).",
+      "Stored quiz data and results in PostgreSQL through Prisma.",
+      "Built the backend API in NestJS.",
+      "Group results are shareable by unique URL.",
+    ],
+    outcome: "Launched a platform for group personality analysis.",
+    github: "",
+    demo: "https://quiz.raulplascencia.dev",
   },
 };

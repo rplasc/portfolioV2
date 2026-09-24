@@ -20,9 +20,6 @@ export async function generateMetadata({
   };
 }
 
-// text-link is reserved for actual links elsewhere on this page, so section
-// labels — including Outcome — stay neutral; the payoff paragraph itself
-// carries the emphasis via size/weight, not color.
 const sectionLabelClass =
   "text-muted-foreground/70 shrink-0 font-mono text-xs font-semibold tracking-[0.2em] uppercase md:w-40 md:pt-1";
 
