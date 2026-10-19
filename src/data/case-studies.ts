@@ -144,4 +144,22 @@ export const caseStudies: Record<string, CaseStudy> = {
     github: "",
     demo: "https://quiz.raulplascencia.dev",
   },
+  mixlens: {
+    slug: "mixlens",
+    title: "MixLens",
+    tagline: "A music production tool for analyzing mixes and masters",
+    role: "Creator",
+    timeframe: "2026 – Present",
+    stack: ["Rust", "Tauri", "Angular"],
+    overview:
+      "MixLens is a music production tool with optional AI features that analyzes mixes and masters, providing insights into frequency balance, stereo imaging, and loudness.",
+    highlights: [
+      "Built a desktop app with Rust for performance, Tauri for the desktop wrapper, and Angular for the frontend.",
+      "Analyzes audio files and provides visual feedback on frequency balance, stereo imaging, and loudness.",
+      "Optional AI assistance suggests mix improvements based on analysis.",
+    ],
+    outcome: "Launched a desktop app for music production analysis.",
+    github: "https://github.com/rplasc/mixlens",
+    demo: "",
+  },
 };

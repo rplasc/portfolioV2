@@ -1,4 +1,9 @@
-export type ProjectCategory = "Web Apps" | "Games" | "3D Modeling" | "Mobile";
+export type ProjectCategory =
+  | "Web Apps"
+  | "Games"
+  | "3D Modeling"
+  | "Mobile"
+  | "Desktop";
 
 // Fixed taxonomy, rendered in this order. Categories can be empty — the filter
 // still shows every chip so the site's scope stays legible as projects are added.
@@ -7,6 +12,7 @@ export const projectCategories: ProjectCategory[] = [
   "Games",
   "3D Modeling",
   "Mobile",
+  "Desktop",
 ];
 
 export interface Project {
@@ -133,6 +139,18 @@ export const projects: Project[] = [
     github: "",
     demo: "https://quiz.raulplascencia.dev",
     featured: true,
+  },
+  {
+    name: "MixLens",
+    slug: "mixlens",
+    category: "Desktop",
+    description: "A music production tool for analyzing mixes and masters.",
+    stack: ["Rust", "Tauri", "Angular"],
+    details:
+      "A desktop app for analyzing audio mixes and masters. It provides visual feedback on frequency balance, stereo imaging, and loudness. Built with Rust for performance, Tauri for the desktop wrapper, and Angular for the frontend. It also includes optional AI assistance for mix suggestions.",
+    github: "https://github.com/rplasc/mixlens",
+    demo: "",
+    featured: false,
   },
 ];
 

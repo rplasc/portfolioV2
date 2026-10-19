@@ -7,7 +7,7 @@ import { contact } from "@/data/contact";
 import { bio, moreInfo } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "About — Raul Plascencia",
+  title: "About - Raul Plascencia",
   description: "About Raul Plascencia, full-stack software engineer.",
 };
 
